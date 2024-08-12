@@ -1,0 +1,18 @@
+/* css styles */
+
+h1 {
+  color: #03b594; /* Set the color of first-level headers (h1) to #3b66bc */
+}
+
+h2 {
+  color: #3b66bc; /* Set the color of first-level headers (h1) to #3b66bc */
+}
+
+a:hover {
+    color: #03b594 
+}
+
+::selection {
+    background:#03b594 ; /* This sets the background color of the highlighted text */
+    color: white; /* This sets the text color within the highlight */
+}
