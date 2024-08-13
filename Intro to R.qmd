@@ -14,7 +14,9 @@ editor: visual
 -   Open source and free
 
     -   R is available for free, making it accessible to everyone
+    
     -   A large, active community contributes to continuous improvement and knowledge sharing
+    
     -   Strong in statistical analysis
 
 -   R has a wide array of packages dedicated to statistical analysis
@@ -71,7 +73,7 @@ editor: visual
         
 ## Try it! 
 
-Download and load packages. You only need to install it once. 
+Download and load packages. You only need to install it once. Tidyverse is a super useful collection of packages designed to make data analysis easier. 
 
 ```{r, warning=FALSE, message=FALSE}
 #install.packages("tidyverse")
@@ -87,6 +89,9 @@ Load the data.
 
 ```{r }
 data("student", package = "oulad")
+
+# Or use Excel 
+student <- read.csv("student.csv")
 ```
 
 Create a count.
@@ -145,6 +150,16 @@ ggplot(student_summary, aes(x = percentage, y = fct_reorder(highest_education, p
 ```
 
 ## Reporting with Quarto
+
+-   Avoid copy and pasting results and charts into reports - inefficient and error prone
+
+-   With Quarto you can run code and write your report, all in one place - no need to copy and paste anything
+
+-   Everything will be fully reproducible - a source of truth
+
+-   Collaborate with colleagues and use version control
+
+-   Use interactive features like interactive charts and tables
 
 -   Case study: [TASO Technical Guide](https://taso-he.github.io/technicalguide/)
 

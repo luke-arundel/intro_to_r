@@ -103,9 +103,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>Open source and free</p>
 <ul>
-<li>R is available for free, making it accessible to everyone</li>
-<li>A large, active community contributes to continuous improvement and knowledge sharing</li>
-<li>Strong in statistical analysis</li>
+<li><p>R is available for free, making it accessible to everyone</p></li>
+<li><p>A large, active community contributes to continuous improvement and knowledge sharing</p></li>
+<li><p>Strong in statistical analysis</p></li>
 </ul></li>
 <li><p>R has a wide array of packages dedicated to statistical analysis</p>
 <ul>
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="try-it" class="level2">
 <h2 class="anchored" data-anchor-id="try-it">Try it!</h2>
-<p>Download and load packages. You only need to install it once.</p>
+<p>Download and load packages. You only need to install it once. Tidyverse is a super useful collection of packages designed to make data analysis easier.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("tidyverse")</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("devtools") </span></span>
@@ -169,7 +169,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Load the data.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"student"</span>, <span class="at">package =</span> <span class="st">"oulad"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"student"</span>, <span class="at">package =</span> <span class="st">"oulad"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use Excel </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>student <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"student.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Create a count.</p>
 <div class="cell">
@@ -206,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Customise it</p>
+<p>Customise it.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(student_summary, <span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> <span class="fu">fct_reorder</span>(highest_education, percentage))) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat =</span> <span class="st">"identity"</span>, <span class="at">fill =</span> <span class="st">"#3b66bc"</span>) <span class="sc">+</span></span>
@@ -244,7 +247,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="reporting-with-quarto" class="level2">
 <h2 class="anchored" data-anchor-id="reporting-with-quarto">Reporting with Quarto</h2>
 <ul>
-<li>Case study: <a href="https://taso-he.github.io/technicalguide/">TASO Technical Guide</a></li>
+<li><p>Avoid copy and pasting results and charts into reports - inefficient and error prone</p></li>
+<li><p>With Quarto you can run code and write your report, all in one place - no need to copy and paste anything</p></li>
+<li><p>Everything will be fully reproducible - a source of truth</p></li>
+<li><p>Collaborate with colleagues and use version control</p></li>
+<li><p>Use interactive features like interactive charts and tables</p></li>
+<li><p>Case study: <a href="https://taso-he.github.io/technicalguide/">TASO Technical Guide</a></p></li>
 </ul>
 </section>
 <section id="resources-for-further-learning" class="level2">
